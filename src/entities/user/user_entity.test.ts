@@ -11,5 +11,5 @@ test("Should create an user entity", ()=>{
     const password_hash = "abc123"
     
     const new_user = new UserEntity(first_name, last_name, email, password_hash).restore()
-
+    'new line'
 })
