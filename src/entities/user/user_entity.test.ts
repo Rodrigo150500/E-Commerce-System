@@ -14,9 +14,9 @@ test("Should create an user entity", ()=>{
 
     expect(new_user).toEqual({
             id: expect.any(String), 
-            first_name: first_name, 
-            last_name: last_name, 
-            email: email, 
+            first_name: "Rodrigo", 
+            last_name: "Takara", 
+            email: "Rodrigo.takara1505@gmail.com", 
             created_at: expect.any(String), 
             updated_at: expect.any(String)
     })
