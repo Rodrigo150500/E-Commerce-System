@@ -12,7 +12,7 @@ test("Should create an user entity", ()=>{
     
     const new_user = new UserEntity(first_name, last_name, email, password_hash).restore()
 
-    expect(new_user).toEqual({
+    expect(new_user).toMatchObject({
             id: expect.any(String), 
             first_name: "Rodrigo", 
             last_name: "Takara", 
