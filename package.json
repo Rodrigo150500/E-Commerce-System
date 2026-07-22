@@ -4,6 +4,7 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
+    "isomorphic-git": "^1.38.10",
     "uuid": "^14.0.1"
   }
 }
