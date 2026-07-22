@@ -14,5 +14,5 @@ test("Should create an user entity", ()=>{
     new_user.restore()
 
     expect(new_user.restore).toHaveBeenCalled()
-    
+    "ola mundo"
 })
