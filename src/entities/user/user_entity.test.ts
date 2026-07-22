@@ -3,21 +3,23 @@ import {v7 as uuid} from "uuid"
 
 import {expect, test} from 'vitest'
 
-test("Should create an user entity", ()=>{
+test("Should create a user", () => {
+    const user = new UserEntity(
+        "Rodrigo",
+        "Takara",
+        "Rodrigo.takara1505@gmail.com",
+        "abc123"
+    );
 
-    const first_name = "Rodrigo"
-    const last_name = "Takara"
-    const email = "Rodrigo.takara1505@gmail.com"
-    const password_hash = "abc123"
-    
-    const new_user = new UserEntity(first_name, last_name, email, password_hash).restore()
+    user.create();
 
-    expect(new_user).toMatchObject({
-            id: expect.any(String), 
-            first_name: "Rodrigo", 
-            last_name: "Takara", 
-            email: "Rodrigo.takara1505@gmail.com", 
-            created_at: expect.any(String), 
-            updated_at: expect.any(String)
-    })
-})
+    expect(user).toMatchObject({
+        id: expect.any(String),
+        first_name: "Rodrigo",
+        last_name: "Takara",
+        email: "Rodrigo.takara1505@gmail.com",
+        password_hash: "abc123",
+        created_at: expect.any(Date),
+        updated_at: expect.any(Date),
+    });
+});
