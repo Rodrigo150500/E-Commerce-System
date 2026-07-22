@@ -10,9 +10,14 @@ test("Should create an user entity", ()=>{
     const email = "Rodrigo.takara1505@gmail.com"
     const password_hash = "abc123"
     
-    const new_user = new UserEntity(first_name, last_name, email, password_hash)
-    new_user.restore()
+    const new_user = new UserEntity(first_name, last_name, email, password_hash).restore()
 
-    expect(new_user.restore).toHaveBeenCalled()
-    "ola mundo"
+    expect(new_user).toEqual({
+            id: expect.any(String), 
+            first_name: first_name, 
+            last_name: last_name, 
+            email: email, 
+            created_at: expect.any(String), 
+            updated_at: expect.any(String)
+    })
 })
